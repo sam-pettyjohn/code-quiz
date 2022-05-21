@@ -8,10 +8,10 @@ var feedback = document.getElementById("feedback");
 
 // quiz status variables
 var timerId;
-var time = questions.length * 15;
+var time = 75;
 var questionIndex = 0;
 
-// WIP
+
 function timer() {
     time--;
     timerElement.textContent = time;
@@ -31,7 +31,7 @@ function quizStart() {
     // reveals questions
     questionsElement.removeAttribute("class");
     // pair timerId to setInterval
-    timerId = setInterval(timer, 100);
+    timerId = setInterval(timer, 1000);
     // show starting time and call pullQuestions
     timerElement.textContent = time;
 
