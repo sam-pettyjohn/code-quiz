@@ -15,6 +15,37 @@
 
 <body>
 
+    <div>Time Remaining: <span id="timer">0</span></div>
+
+    <div>
+        <!-- instructions -->
+        <div id="quiz-rules">
+            <h1>Code Quiz!</h1>
+            <p>
+                Try to answer the following code-related questions within the time
+                limit. Keep in mind that incorrect answers will penalize your
+                score/time by ten seconds!
+            </p>
+            <button id="start-quiz">Start Quiz</button>
+        </div>
+
+        <!-- questions -->
+        <div id="questions" class="hide">
+            <h3 id="questions-title"></h3>
+
+            <div id="choices" class="choice"></div>
+        </div>
+
+        <!-- scorecard -->
+        <div id="quiz-over" style="display: none;">
+            <h3>The Code Quiz is Over!</h3>
+            <p>Final Score: <span id="reveal-score"></span></p>
+        </div>
+
+        <!-- feedback (right/wrong user input)-->
+        <div id="feedback"></div>
+    </div>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- JS -->

@@ -1,4 +1,4 @@
-const questions = [
+var questions = [
     // Question One
     {
         question: "How do you create a function in JavaScript?",
