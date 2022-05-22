@@ -4,7 +4,7 @@
 
 A JavaScript coding assessment of multiple-choice questions. 
 
-Visit the deployed webpage [here!](sam-pettyjohn.github.io/code-quiz/)
+Visit the deployed webpage [here!](https://sam-pettyjohn.github.io/code-quiz/)
 
 ## Table of Contents
 
