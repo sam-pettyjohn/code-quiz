@@ -47,13 +47,14 @@ function pullQuestions() {
     // clear old question choices
     choicesElement.innerHTML = "";
 
-    pulledQuestion.choices.forEach(function (choice, index) {
+    pulledQuestion.choices.forEach(function (choice) {
         // create a button for each choice available
         var option = document.createElement("button");
-        option.setAttribute("class", "choice");
+        option.setAttribute("type", "button");
+        option.setAttribute("class", "choice btn btn-primary custom mx-3 my-3 d-flex flex-column");
         option.setAttribute("value", choice);
 
-        option.textContent = index + 1 + ". " + choice;
+        option.textContent = choice;
 
         // add onclick event listener for each choice
         option.onclick = questionSelect;
@@ -66,8 +67,8 @@ function pullQuestions() {
 function questionSelect() {
     // check is user answer is correct
     if (this.value !== questions[questionIndex].answer) {
-        feedback.textContent = "Incorrect!";
-        time -= 15;
+        feedback.textContent = "Wrong!";
+        time -= 10;
     } else {
         feedback.textContent = "Correct!";
     }

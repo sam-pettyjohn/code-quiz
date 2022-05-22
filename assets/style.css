@@ -1,3 +1,32 @@
-.class hide {
+.hide {
     display: none;
+}
+
+.btn-primary {
+    background-color: blueviolet !important;
+}
+
+.navbar {
+    font-size: larger;
+}
+
+.custom {
+    width: 50%;
+}
+
+li {
+    font-size: larger;
+}
+
+p {
+    font-size: larger;
+}
+
+#feedback {
+    font-style: italic;
+    font-size: larger;
+}
+
+#questions-title {
+    justify-content: center;
 }

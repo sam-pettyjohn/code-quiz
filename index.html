@@ -15,42 +15,46 @@
 
 <body>
 
-    <div>Time Remaining: <span id="timer">0</span></div>
+    <div class="my-3 mx-3 navbar d-flex justify-content-between">
+        <div><a href="./highscores.html" style="text-decoration: none; color: blueviolet;">View High Scores</a></div>
+        <div>Time Remaining: <span id="timer">0</span></div>
+    </div>
 
     <div>
         <!-- instructions -->
-        <div id="quiz-rules">
-            <h1>Code Quiz!</h1>
-            <p>
+        <div id="quiz-rules" class="text-center mx-auto mt-5" style="width: 60%;">
+            <h1 class="mb-4">Code Quiz Challenge</h1>
+            <h4 class="mb-4">
                 Try to answer the following code-related questions within the time
                 limit. Keep in mind that incorrect answers will penalize your
                 score/time by ten seconds!
-            </p>
-            <button id="start-quiz">Start Quiz</button>
-            <a href="./highscores.html"><button>View High Scores</button></a>
+            </h4>
+            <button type="button" class="btn btn-primary btn-lg" id="start-quiz">Start Quiz</button>
+    
         </div>
 
         <!-- questions -->
-        <div id="questions" class="hide">
-            <h3 id="questions-title"></h3>
+        <div class="text-center mx-auto mt-5" style="width: 30%;">
+            <div id="questions" class="hide">
+                <h3 id="questions-title" class="my-3 mx-3"></h3>
 
-            <div id="choices" class="choice"></div>
+                <div id="choices" class="choice"></div>
+            </div>
         </div>
 
         <!-- scorecard -->
-        <div id="quiz-over" style="display: none;">
-            <h3>The Code Quiz is Over!</h3>
+        <div id="quiz-over" style="display: none;" class="my-3 mx-3">
+            <h3 class="my-3 mx-3">The Code Quiz is Over!</h3>
 
-            <p>Final Score: <span id="reveal-score"></span></p>
+            <h5 class="my-3 mx-3">Final Score: <span id="reveal-score"></span></h5>
 
-            <p>Enter your initials: <input type="text" id="initials"/>
-            <button id="submit">Submit</button>
-            
+            <p class="my-3 mx-3">Enter your initials: <input type="text" id="initials"/>
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
             </p>
         </div>
 
         <!-- feedback (right/wrong user input)-->
-        <div id="feedback" class="hide"></div>
+        <div id="feedback" class="my-3 mx-3 text-center"></div>
     </div>
 
     <!-- jQuery -->
