@@ -5,12 +5,13 @@ var questionsElement = document.getElementById("questions");
 var scoreElement = document.getElementById("reveal-score");
 var choicesElement = document.getElementById("choices");
 var feedback = document.getElementById("feedback");
+var initialsElement = document.getElementById("initials");
+var submitButton = document.getElementById("submit");
 
 // quiz status variables
 var timerId;
 var time = 75;
 var questionIndex = 0;
-
 
 function timer() {
     time--;
@@ -100,9 +101,25 @@ function quizEnds() {
     clearInterval(timerId);
 }
 
-// WIP 
 function score() {
     $("#quiz-over").show();
+    $("initials").hide();
 
+    var initials = initialsElement.value.trim();
 
+    if (initials !== "") {
+
+        var hs = JSON.parse(window.localStorage.getItem("High Scores")) || [];
+
+        var hsValues = {
+            score: time,
+            initials: initials
+        }
+
+        hs.push(hsValues);
+        localStorage.setItem("High Scores", JSON.stringify(hs));
+        console.log(time);
+        window.location.href = "highscores.html";
+    }
 }
+submitButton.onclick = score;
